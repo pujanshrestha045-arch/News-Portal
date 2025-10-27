@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        body {
+            height: 1200vh;
+        }
+    </style> -->
+</head>
+
+<body>
+    <header class="sticky top-0 z-50 bg-(--card) border-b border-(--border)">
+        <div class="bg-(--primary) text-(--text)">
+            <div class="container mx-auto px-4 py-4 flex items-center justify-between text-sm">
+                <div class="flex items-center gap-4"><time class="sm-block text-xl">Thursday, October 27, 2025</time>
+                </div>
+                <div class="flex items-center gap-2"><button
+                        class="border-[1px] rounded-3xl p-1 bg-(--accent)">Light/Dark</button></div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 py-4  bg-white">
+            <div class="flex items-center justify-between gap-4">
+                <div class="flex items-center">
+                    <h1 class="text-3xl lg:text-3xl font-bold text-(--primary)">News Portal</h1>
+                </div>
+                <div class="flex items-center gap-2 lg:hidden">
+                    <div>Search</div>
+                    <div>Menu</div>
+                </div>
+                <div class="lg:flex hidden"><input type="text" placeholder="Search news..."
+                        class="h-9 min-w-0 px-3 py-1 text-base border bg-transparent drop-shadow-sm rounded-lg">
+                </div>
+            </div>
+        </div>
+
+        <nav class="hidden lg:flex">
+            <div class="container mx-auto px-7 py-4">
+                <ul class="hidden lg:flex justify-evenly font-semibold text-xl">
+                    <li>Home</li>
+                    <li>Politics</li>
+                    <li>Business</li>
+                    <li>Sports</li>
+                    <li>Entertainment</li>
+                    <li>Lifestyle</li>
+                    <li>Opinion</li>
+                    <li>English Edition</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="hero mb-7">
+        <div class="bg-(--background) text-black">
+            <div
+                class="container mx-auto px-7 py-4 flex flex-col gap-7 items-center justify-evenly text-sm lg:grid lg:grid-cols-2 ">
+                <div class="leftgrid">
+                    <div class="card relative border border-transparent p-5 shadow-sm rounded-xl row-span-2">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rightgrid lg:grid lg:grid-cols-2 flex flex-col">
+                    <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="latest relative">
+        <div class="text-black bg-(--background) border-y-1 border-gray-300">
+            <div
+                class="container relative mx-auto px-4 py-4 flex flex-col gap-10 justify-evenly text-sm lg:grid lg:grid-cols-3 items-start">
+                <div class="leftgrid lg:grid lg:grid-cols-2 flex flex-col col-span-2 gap-5">
+                    <div class="col-span-2">
+                        <h2 class=" text-4xl py-4">Latest News</h2>
+
+                    </div>
+                    <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                        <img class="w-[100%]"
+                            src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                            alt="logo">
+                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News</div>
+                        <div class="details">
+                            <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes Parliament
+                                After Heated Debate</h2>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at eaque
+                                architecto itaque ullam!</p>
+                            <div class="flex items-center gap-4">
+                                <p>Author</p>
+                                <p>Time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-2">
+                        <h2 class=" text-5xl p-7">Politics</h2>
+                    </div>
+
+                    <div class="col-span-2 lg:grid lg:grid-cols-3 gap-6">
+                        <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                            <img class="w-[100%]"
+                                src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                                alt="logo">
+                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
+                            </div>
+                            <div class="details">
+                                <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes
+                                    Parliament
+                                    After Heated Debate</h2>
+                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at
+                                    eaque
+                                    architecto itaque ullam!</p>
+                                <div class="flex items-center gap-4">
+                                    <p>Author</p>
+                                    <p>Time</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                            <img class="w-[100%]"
+                                src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                                alt="logo">
+                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
+                            </div>
+                            <div class="details">
+                                <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes
+                                    Parliament
+                                    After Heated Debate</h2>
+                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at
+                                    eaque
+                                    architecto itaque ullam!</p>
+                                <div class="flex items-center gap-4">
+                                    <p>Author</p>
+                                    <p>Time</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                            <img class="w-[100%]"
+                                src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                                alt="logo">
+                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
+                            </div>
+                            <div class="details">
+                                <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes
+                                    Parliament
+                                    After Heated Debate</h2>
+                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at
+                                    eaque
+                                    architecto itaque ullam!</p>
+                                <div class="flex items-center gap-4">
+                                    <p>Author</p>
+                                    <p>Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-2">
+                        <h2 class=" text-5xl p-7">Sports</h2>
+                    </div>
+
+                    <div class="col-span-2 lg:grid lg:grid-cols-3  gap-6">
+                        <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                            <img class="w-[100%]"
+                                src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                                alt="logo">
+                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
+                            </div>
+                            <div class="details">
+                                <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes
+                                    Parliament
+                                    After Heated Debate</h2>
+                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at
+                                    eaque
+                                    architecto itaque ullam!</p>
+                                <div class="flex items-center gap-4">
+                                    <p>Author</p>
+                                    <p>Time</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                            <img class="w-[100%]"
+                                src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                                alt="logo">
+                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
+                            </div>
+                            <div class="details">
+                                <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes
+                                    Parliament
+                                    After Heated Debate</h2>
+                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at
+                                    eaque
+                                    architecto itaque ullam!</p>
+                                <div class="flex items-center gap-4">
+                                    <p>Author</p>
+                                    <p>Time</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                            <img class="w-[100%]"
+                                src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                                alt="logo">
+                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
+                            </div>
+                            <div class="details">
+                                <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes
+                                    Parliament
+                                    After Heated Debate</h2>
+                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at
+                                    eaque
+                                    architecto itaque ullam!</p>
+                                <div class="flex items-center gap-4">
+                                    <p>Author</p>
+                                    <p>Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-2">
+                        <h2 class=" text-5xl p-7">Entertainment</h2>
+                    </div>
+
+                    <div class="col-span-2 lg:grid lg:grid-cols-3 gap-6">
+                        <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                            <img class="w-[100%]"
+                                src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                                alt="logo">
+                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
+                            </div>
+                            <div class="details">
+                                <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes
+                                    Parliament
+                                    After Heated Debate</h2>
+                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at
+                                    eaque
+                                    architecto itaque ullam!</p>
+                                <div class="flex items-center gap-4">
+                                    <p>Author</p>
+                                    <p>Time</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                            <img class="w-[100%]"
+                                src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                                alt="logo">
+                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
+                            </div>
+                            <div class="details">
+                                <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes
+                                    Parliament
+                                    After Heated Debate</h2>
+                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at
+                                    eaque
+                                    architecto itaque ullam!</p>
+                                <div class="flex items-center gap-4">
+                                    <p>Author</p>
+                                    <p>Time</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative border border-transparent p-5 shadow-lg rounded-xl">
+                            <img class="w-[100%]"
+                                src="https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
+                                alt="logo">
+                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
+                            </div>
+                            <div class="details">
+                                <h2 class="text-2xl lg:text-2xl font-semibold">Major Economic Reform Bill Passes
+                                    Parliament
+                                    After Heated Debate</h2>
+                                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis at
+                                    eaque
+                                    architecto itaque ullam!</p>
+                                <div class="flex items-center gap-4">
+                                    <p>Author</p>
+                                    <p>Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <aside class="lg:col-span-1 sticky top-24">
+                    <div class=" space-y-6">
+
+
+                        <div class="card-header border border-transparent p-7 shadow-sm rounded-xl">
+                            <h2 class="text-4xl py-4 mb-12">Trending News</h2>
+                            <ul class="space-y-3">
+                                <li>
+                                    <h3 class="text-xl">Breaking: Major Policy Announcement Expected Today</h3>
+                                    <p class="opacity-50">125K views</p>
+                                </li>
+                                <li>
+                                    <h3 class="text-xl">Tech Company Unveils Revolutionary Product</h3>
+                                    <p class="opacity-50">98K views</p>
+                                </li>
+                                <li>
+                                    <h3 class="text-xl">Celebrity Couple Announces Engagement</h3>
+                                    <p class="opacity-50">87K views</p>
+                                </li>
+                                <li>
+                                    <h3 class="text-xl">Scientists Make Groundbreaking Discovery</h3>
+                                    <p class="opacity-50">76K views</p>
+                                </li>
+                                <li>
+                                    <h3 class="text-xl">Local Hero Saves Family from Fire</h3>
+                                    <p class="opacity-50">65K views</p>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="card-header border border-transparent p-5 shadow-sm rounded-xl">
+                            <h2 class="text-3xl py-7">Most Read</h2>
+                            <ul class="space-y-3">
+                                <li>
+                                    <span class="border px-2 py-0.5 rounded-sm">Business</span>
+                                    <p class="border-b border-gray-400 py-2">Understanding the New Tax Reform: What You
+                                        Need to Know</p>
+                                </li>
+                                <li>
+                                    <span class="border px-2 py-0.5 rounded-sm">Lifestyle</span>
+                                    <p class="border-b border-gray-400 py-2">10 Tips for Healthy Living in 2025</p>
+                                </li>
+                                <li>
+                                    <span class="border px-2 py-0.5 rounded-sm">Environment</span>
+                                    <p class="border-b border-gray-400 py-2">The Rise of Renewable Energy: A
+                                        Comprehensive Guide</p>
+                                </li>
+                                <li>
+                                    <span class="border px-2 py-0.5 rounded-sm">Culture</span>
+                                    <p class="border-b border-gray-400 py-2">Interview: Award-Winning Author Discusses
+                                        New Book</p>
+                                </li>
+                                <li>
+                                    <span class="border px-2 py-0.5 rounded-sm">Travel</span>
+                                    <p class="py-2">Travel Guide: Hidden Gems Worth Visiting</p>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="flex flex-col gap-6">
+                            <div class="card-header border border-transparent p-5 shadow-sm rounded-xl">
+                                <h2 class="text-3xl py-7 mb-5">Follow us</h2>
+                                <div class="lg:grid lg:grid-cols-2 max-w-sm gap-2 flex flex-col text-center">
+                                    <a class="border border-gray-300 rounded-sm" href="#">Facebook</a>
+                                    <a class="border border-gray-300 rounded-sm" href="#">X</a>
+                                    <a class="border border-gray-300 rounded-sm" href="#">Instagram</a>
+                                    <a class="border border-gray-300 rounded-sm" href="#">Youtube</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-6">
+                            <div
+                                class="card-header border border-transparent p-5 shadow-sm rounded-xl bg-(--primary) text-white">
+                                <h2 class="text-2xl px-7 mb-5 font-semibold">Subscribe to Newsletter</h2>
+                                <p class="px-7 mb-5">Get the latest news delivered to your inbox daily.</p>
+                                <input class="w-full mb-2 px-7 py-2 bg-white text-gray-500" type="email" name="" id=""
+                                    placeholder="Enter your email">
+                                <button class="px-7 py-2 w-full items-center bg-(--accent)">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-(--card) mt-12">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div class="socials">
+                    <h3>NewsPortal</h3>
+                    <p>Your trusted source for breaking news, in-depth analysis, and comprehensive coverage of events
+                        that matter.</p>
+                    <div class="flex">fb x ig yt</div>
+                </div>
+                <div class="links">
+                    <h3>Quick Links</h3>
+                    <ul class="block gap-2">
+                        <li>Home</li>
+                        <li>Politics</li>
+                        <li>Business</li>
+                        <li>Sports</li>
+                        <li>Entertainment</li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h3>Company</h3>
+                    <ul class="block gap-2">
+                        <li>About Us</li>
+                        <li>Contact</li>
+                        <li>Careers</li>
+                        <li>Advertise</li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h3>Legal</h3>
+                    <ul class="block gap-2">
+                        <li>Privacy Policy</li>
+                        <li>Terms of Use</li>
+                        <li>Cookie Policy</li>
+                        <li>Disclaimer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t-1 border-gray-300">
+                <div class="flex justify-between  mt-5 text-gray-500">
+                    <p>© 2025 NewsPortal. All rights reserved.</p>
+                    <a href="#">contact@newsportal.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
