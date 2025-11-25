@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Header -->
-    <header class="sticky top-0 z-50 bg-[var(--card)] border-b border-[var(--border)]">
+    <header class="sticky top-0 z-2000 bg-[var(--card)] border-b border-[var(--border)] h-auto flex flex-col justify-evenly">
         <!-- Top Bar -->
         <div class="bg-[var(--primary)] text-[var(--text)]">
-            <div class="container mx-auto px-4 py-3 flex items-center justify-between text-xs sm:text-sm lg:text-base">
+            <div class="container mx-auto px-4 py-3 flex justify-center text-xs sm:text-sm lg:text-base">
                 <time id="clock" class="text-sm sm:text-lg lg:text-xl"></time>
-                <button
-                    class="border rounded-3xl px-3 py-1 bg-[var(--accent)] text-xs sm:text-sm lg:text-base">Light/Dark</button>
             </div>
         </div>
 
@@ -28,18 +27,18 @@
 
                 <!-- Desktop Search -->
                 <input type="text" placeholder="Search news..."
-                    class="hidden sm:flex h-9 w-[200px] md:w-[250px] lg:w-[300px] px-3 py-1 border bg-transparent rounded-lg ">
+                    class="hidden lg:flex lg:w-[300px] px-3 py-1 border bg-transparent rounded-lg ">
 
 
-                <div class="flex justify-between gap-4">
-                    <div class="sm:hidden cursor-pointer text-sm">Search</div>
+                <div class="flex justify-between gap-4 lg:hidden">
+                    <div class=" cursor-pointer text-sm lg:hidden"><i class="bi bi-search"></i></div>
                     <div id="menuToggle" class="cursor-pointer text-sm">Menu</div>
                 </div>
             </div>
         </div>
 
         <!-- Menu -->
-        <nav id="menu" class="hidden">
+        <nav id="menu" class="">
             <div class="container mx-auto py-4 text-lg font-semibold">
                 <ul>
                     <li>Home</li>
@@ -59,17 +58,18 @@
     <section class="hero border-y border-gray-300">
         <div class="container mx-auto p-4 flex flex-col gap-5 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 items-start">
             <!-- Left section Carousel and news -->
-            <div class="leftgrid md:col-span-2 flex flex-col gap-10">
+            <div class="leftgrid md:col-span-2 flex flex-col w-full gap-5">
                 <!-- Carousel -->
-                <div class="carousel relative">
+                <div class="carousel relative z-1">
 
-                    <button class="nav-left hidden lg:flex absolute top-1/2 -translate-y-1/2 left-2" id="slideLeft"> &lt; </button>
+                    <button class="nav-left absolute top-1/2 -translate-y-1/2 left-2" id="slideLeft"> &lt; </button>
 
-                    <div class="overflow-hidden rounded-xl">
-                        <div class="news flex overflow-x-auto snap-x snap-mandatory scroll-smooth max-w-full" id="newsContainer">
+                    <div class="rounded-xl">
+                        <div class="news flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full touch-pan-x"
+                            id="newsContainer">
                             <!-- Slides -->
                             <div
-                                class="carousel-slide snap-center p-4 w-[90%] sm:min-w-[300px] md:min-w-[350px] lg:min-w-full">
+                                class="carousel-slide snap-center px-4 min-w-full">
                                 <div class="card relative shadow-lg rounded-xl overflow-hidden">
                                     <img class="w-full h-48 sm:h-56 md:h-64 lg:h-80" src="img/newsconference.png"
                                         alt="logo">
@@ -77,18 +77,18 @@
                                         class="hidden lg:flex absolute top-4 left-4 bg-black text-white px-3 py-1 rounded">
                                         Breaking News
                                     </div>
-                                    <div id=" " class="details p-4">
-                                        <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">Major
+                                    <div   class="details">
+                                        <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold px-2 truncate">Major
                                             Economic Reform Bill
                                             Passes
                                             Parliament
                                             After Heated Debate</h2>
-                                        <p class="text-sm sm:text-base truncate mt-2">Lorem ipsum dolor sit amet
+                                        <p class="text-sm sm:text-base truncate px-2 mt-2">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Natus
                                             debitis
                                             at eaque
                                             architecto itaque ullam!</p>
-                                        <div class="flex gap-4 text-xs sm:text-sm mt-3">
+                                        <div class="flex gap-4 text-xs sm:text-sm px-2 mt-3">
                                             <p>Author</p>
                                             <p>Time</p>
                                         </div>
@@ -97,7 +97,7 @@
                             </div>
 
                             <div
-                                class="carousel-slide snap-center p-4 w-[90%] sm:min-w-[300px] md:min-w-[350px] lg:min-w-full">
+                                class="carousel-slide snap-center px-4 min-w-full">
                                 <div class="card relative shadow-lg rounded-xl overflow-hidden">
                                     <img class="w-full h-48 sm:h-56 md:h-64 lg:h-80" src="img/techbreakthrogh.jpg"
                                         alt="logo">
@@ -105,18 +105,18 @@
                                         class="hidden lg:flex absolute top-4 left-4 bg-black text-white px-3 py-1 rounded">
                                         Breaking News
                                     </div>
-                                    <div id=" " class="details p-4">
-                                        <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major
+                                    <div   class="details">
+                                        <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold px-2 truncate">Major
                                             Economic Reform
                                             Bill Passes
                                             Parliament
                                             After Heated Debate</h2>
-                                        <p class="text-sm sm:text-base truncate mt-2">Lorem ipsum dolor sit amet
+                                        <p class="text-sm sm:text-base truncate px-2 mt-2">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit.
                                             Natus debitis
                                             at eaque
                                             architecto itaque ullam!</p>
-                                        <div class="flex gap-4 text-xs sm:text-sm mt-3">
+                                        <div class="flex gap-4 text-xs sm:text-sm px-2 mt-3">
                                             <p>Author</p>
                                             <p>Time</p>
                                         </div>
@@ -125,7 +125,7 @@
                             </div>
 
                             <div
-                                class="carousel-slide snap-center p-4 w-[90%] sm:min-w-[300px] md:min-w-[350px] lg:min-w-full">
+                                class="carousel-slide snap-center px-4 min-w-full">
                                 <div class="card relative shadow-lg rounded-xl overflow-hidden">
                                     <img class="w-full h-48 sm:h-56 md:h-64 lg:h-80" src="img/sportscelebration.jpg"
                                         alt="logo">
@@ -133,18 +133,18 @@
                                         class="hidden lg:flex absolute top-4 left-4 bg-black text-white px-3 py-1 rounded">
                                         Breaking News
                                     </div>
-                                    <div id=" " class="details p-4">
-                                        <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major
+                                    <div   class="details">
+                                        <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold px-2 truncate">Major
                                             Economic Reform
                                             Bill Passes
                                             Parliament
                                             After Heated Debate</h2>
-                                        <p class="text-sm sm:text-base truncate mt-2">Lorem ipsum dolor sit amet
+                                        <p class="text-sm sm:text-base truncate px-2 mt-2">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit.
                                             Natus debitis
                                             at eaque
                                             architecto itaque ullam!</p>
-                                        <div class="flex gap-4 text-xs sm:text-sm mt-3">
+                                        <div class="flex gap-4 text-xs sm:text-sm px-2 mt-3">
                                             <p>Author</p>
                                             <p>Time</p>
                                         </div>
@@ -153,7 +153,7 @@
                             </div>
 
                             <div
-                                class="carousel-slide snap-center p-4 w-[90%] sm:min-w-[300px] md:min-w-[350px] lg:min-w-full">
+                                class="carousel-slide snap-center px-4 min-w-full">
                                 <div class="card relative shadow-lg rounded-xl overflow-hidden">
                                     <img class="w-full h-48 sm:h-56 md:h-64 lg:h-80" src="img/climatesummit.png"
                                         alt="logo">
@@ -161,18 +161,18 @@
                                         class="hidden lg:flex absolute top-4 left-4 bg-black text-white px-3 py-1 rounded">
                                         Breaking News
                                     </div>
-                                    <div id=" " class="details p-4">
-                                        <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major
+                                    <div   class="details">
+                                        <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold px-2 truncate">Major
                                             Economic Reform
                                             Bill Passes
                                             Parliament
                                             After Heated Debate</h2>
-                                        <p class="text-sm sm:text-base truncate mt-2">Lorem ipsum dolor sit amet
+                                        <p class="text-sm sm:text-base truncate px-2 mt-2">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit.
                                             Natus debitis
                                             at eaque
                                             architecto itaque ullam!</p>
-                                        <div class="flex gap-4 text-xs sm:text-sm mt-3">
+                                        <div class="flex gap-4 text-xs sm:text-sm px-2 mt-3">
                                             <p>Author</p>
                                             <p>Time</p>
                                         </div>
@@ -181,7 +181,7 @@
                             </div>
 
                             <div
-                                class="carousel-slide snap-center p-4 w-[90%] sm:min-w-[300px] md:min-w-[350px] lg:min-w-full">
+                                class="carousel-slide snap-center px-4 min-w-full">
                                 <div class="card relative shadow-lg rounded-xl overflow-hidden">
                                     <img class="w-full h-48 sm:h-56 md:h-64 lg:h-80" src="img/healthyfood.png"
                                         alt="logo">
@@ -189,15 +189,15 @@
                                         class="hidden lg:flex absolute top-4 left-4 bg-black text-white px-3 py-1 rounded">
                                         Breaking News
                                     </div>
-                                    <div id=" " class="details p-4">
-                                        <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major
+                                    <div   class="details">
+                                        <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">Major
                                             Economic Reform Bill Passes Parliament After Heated Debate</h2>
-                                        <p class="text-sm sm:text-base truncate mt-2">Lorem ipsum dolor sit amet
+                                        <p class="text-sm sm:text-base truncate px-2 mt-2">Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit.
                                             Natus debitis
                                             at eaque
                                             architecto itaque ullam!</p>
-                                        <div class="flex gap-4 text-xs sm:text-sm mt-3">
+                                        <div class="flex gap-4 text-xs sm:text-sm px-2 mt-3">
                                             <p>Author</p>
                                             <p>Time</p>
                                         </div>
@@ -207,7 +207,7 @@
                         </div>
                     </div>
 
-                    <button id="slideRight" class="nav-right hidden lg:flex absolute top-1/2 -translate-y-1/2 right-2"> &gt;
+                    <button id="slideRight" class="nav-right absolute top-1/2 -translate-y-1/2 right-2"> &gt;
                     </button>
 
                 </div>
@@ -215,9 +215,9 @@
                 <div class="lg:col-span-2">
                     <h2 class=" text-2xl sm:text-3xl md:text-4xl font-bold py-4">Latest News</h2>
 
-                    <div class="flex overflow-x-auto gap-6 lg:grid lg:grid-cols-3">
+                    <div class="container flex overflow-x-auto gap-6 lg:grid lg:grid-cols-3">
                         <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
                             <img class="w-full h-48" src="img/construction.png" alt="logo">
 
                             <div class="details p-4">
@@ -233,10 +233,9 @@
                         </div>
 
                         <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
                             <img class="w-full h-48" src="img/stockmarket.jpg" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
+                            
                             <div class="details p-4">
                                 <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
                                     Reform Bill Passes Parliament After Heated Debate</h2>
@@ -251,10 +250,9 @@
                         </div>
 
                         <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
                             <img class="w-full h-48" src="img/stadiumcrowd.png" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
+                            
                             <div class="details p-4">
                                 <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
                                     Reform Bill Passes Parliament After Heated Debate</h2>
@@ -269,10 +267,9 @@
                         </div>
 
                         <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
                             <img class="w-full h-48" src="img/redcarpet.jpg" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
+                            
                             <div class="details p-4">
                                 <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
                                     Reform Bill Passes Parliament After Heated Debate</h2>
@@ -287,10 +284,9 @@
                         </div>
 
                         <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
                             <img class="w-full h-48" src="img/researchlab.png" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
+                            
                             <div class="details p-4">
                                 <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
                                     Reform Bill Passes Parliament After Heated Debate</h2>
@@ -305,10 +301,9 @@
                         </div>
 
                         <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
                             <img class="w-full h-48" src="img/fashionrunway.png" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
+                            
                             <div class="details p-4">
                                 <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
                                     Reform Bill Passes Parliament After Heated Debate</h2>
@@ -326,17 +321,12 @@
 
                 <div class="lg:col-span-2">
                     <h2 class=" text-2xl sm:text-3xl md:text-4xl font-bold py-4">International</h2>
-
-                    <div class="flex overflow-x-auto gap-6 lg:grid lg:grid-cols-3">
-                        <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
-                            <img class="w-full h-48" src="img/climatecrisis.jpg" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
+                    <div class="container flex overflow-x-auto gap-6 lg:grid lg:grid-cols-3">                        
+                        <div class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
+                            <img class="w-full h-48" src="img/climatecrisis.jpg" alt="logo">                            
                             <div class="details p-4">
                                 <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
                                     Reform Bill Passes Parliament After Heated Debate</h2>
-
                                 <p class="card-text text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Natus debitis at eaque architecto itaque ullam!</p>
                                 <div class="flex gap-4 text-xs sm:text-sm mt-3">
@@ -347,10 +337,9 @@
                         </div>
 
                         <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
                             <img class="w-full h-48" src="img/tradeagreement.jpg" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
+                            
                             <div class="details p-4">
                                 <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
                                     Reform Bill Passes Parliament After Heated Debate</h2>
@@ -365,10 +354,9 @@
                         </div>
 
                         <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
                             <img class="w-full h-48" src="img/crisis.jpg" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
+                            
                             <div class="details p-4">
                                 <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
                                     Reform Bill Passes Parliament After Heated Debate</h2>
@@ -387,12 +375,11 @@
                 <div class="lg:col-span-2">
                     <h2 class=" text-2xl sm:text-3xl md:text-4xl font-bold py-4">Sports</h2>
 
-                    <div class="flex overflow-x-auto gap-6 lg:grid lg:grid-cols-3">
+                    <div class="container flex overflow-x-auto gap-6 lg:grid lg:grid-cols-3">
                         <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
                             <img class="w-full h-48" src="img/athletecontract.jpg" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
+                            
                             <div class="details p-4">
                                 <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
                                     Reform Bill Passes Parliament After Heated Debate</h2>
@@ -407,10 +394,9 @@
                         </div>
 
                         <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
                             <img class="w-full h-48" src="img/sportsvictory.png" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
+                            
                             <div class="details p-4">
                                 <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
                                     Reform Bill Passes Parliament After Heated Debate</h2>
@@ -423,80 +409,84 @@
                                 </div>
                             </div>
                         </div>
-                    
 
-                    <div
-                        class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
-                        <img class="w-full h-48" src="img/olympics.jpg" alt="logo">
-                        <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                        </div>
-                        <div class="details p-4">
-                            <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic Reform
-                                Bill Passes Parliament After Heated Debate</h2>
-                            <p class="card-text text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Natus debitis at eaque architecto itaque ullam!</p>
-                            <div class="flex gap-4 text-xs sm:text-sm mt-3">
-                                <p>Author</p>
-                                <p>Time</p>
+
+                        <div
+                            class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
+                            <img class="w-full h-48" src="img/olympics.jpg" alt="logo">
+                            
+                            <div class="details p-4">
+                                <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
+                                    Reform
+                                    Bill Passes Parliament After Heated Debate</h2>
+                                <p class="card-text text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Natus debitis at eaque architecto itaque ullam!</p>
+                                <div class="flex gap-4 text-xs sm:text-sm mt-3">
+                                    <p>Author</p>
+                                    <p>Time</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="lg:col-span-2">
-                    <h2 class=" text-2xl sm:text-3xl md:text-4xl font-bold py-4">Entertainment</h2>
+                    <div class="lg:col-span-2">
+                        <h2 class=" text-2xl sm:text-3xl md:text-4xl font-bold py-4">Entertainment</h2>
 
-                    <div class="flex overflow-x-auto gap-6 lg:grid lg:grid-cols-3">
-                        <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
-                            <img class="w-full h-48" src="img/streamplatform.jpg" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
-                            <div class="details p-4">
-                                <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
-                                    Reform Bill Passes Parliament After Heated Debate</h2>
+                        <div class="container flex overflow-x-auto gap-6 lg:grid lg:grid-cols-3">
+                            <div
+                                class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
+                                <img class="w-full h-48" src="img/streamplatform.jpg" alt="logo">
+                                
+                                <div class="details p-4">
+                                    <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major
+                                        Economic
+                                        Reform Bill Passes Parliament After Heated Debate</h2>
 
-                                <p class="card-text text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Natus debitis at eaque architecto itaque ullam!</p>
-                                <div class="flex gap-4 text-xs sm:text-sm mt-3">
-                                    <p>Author</p>
-                                    <p>Time</p>
+                                    <p class="card-text text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet
+                                        consectetur
+                                        adipisicing elit. Natus debitis at eaque architecto itaque ullam!</p>
+                                    <div class="flex gap-4 text-xs sm:text-sm mt-3">
+                                        <p>Author</p>
+                                        <p>Time</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
-                            <img class="w-full h-48" src="img/musicstage.png" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
-                            <div class="details p-4">
-                                <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
-                                    Reform Bill Passes Parliament After Heated Debate</h2>
+                            <div
+                                class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
+                                <img class="w-full h-48" src="img/musicstage.png" alt="logo">
+                                
+                                <div class="details p-4">
+                                    <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major
+                                        Economic
+                                        Reform Bill Passes Parliament After Heated Debate</h2>
 
-                                <p class="card-text text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Natus debitis at eaque architecto itaque ullam!</p>
-                                <div class="flex gap-4 text-xs sm:text-sm mt-3">
-                                    <p>Author</p>
-                                    <p>Time</p>
+                                    <p class="card-text text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet
+                                        consectetur
+                                        adipisicing elit. Natus debitis at eaque architecto itaque ullam!</p>
+                                    <div class="flex gap-4 text-xs sm:text-sm mt-3">
+                                        <p>Author</p>
+                                        <p>Time</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div
-                            class="card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:w-[300px] lg:w-full border border-transparent">
-                            <img class="w-full h-48" src="img/cinema.jpg" alt="logo">
-                            <div class="hidden lg:flex absolute top-10 left-10 border-2 border-black">Breaking News
-                            </div>
-                            <div class="details p-4">
-                                <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major Economic
-                                    Reform Bill Passes Parliament After Heated Debate</h2>
+                            <div
+                                class=" card p-[15px] shadow-lg rounded-xl overflow-hidden min-w-[250px] sm:min-w-[300px] lg:min-w-0 lg:w-full border border-transparent">
+                                <img class="w-full h-48" src="img/cinema.jpg" alt="logo">
+                                
+                                <div class="details p-4">
+                                    <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold p-2 truncate">>Major
+                                        Economic
+                                        Reform Bill Passes Parliament After Heated Debate</h2>
 
-                                <p class="card-text text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Natus debitis at eaque architecto itaque ullam!</p>
-                                <div class="flex gap-4 text-xs sm:text-sm mt-3">
-                                    <p>Author</p>
-                                    <p>Time</p>
+                                    <p class="card-text text-sm sm:text-base mt-2">Lorem ipsum dolor sit amet
+                                        consectetur
+                                        adipisicing elit. Natus debitis at eaque architecto itaque ullam!</p>
+                                    <div class="flex gap-4 text-xs sm:text-sm mt-3">
+                                        <p>Author</p>
+                                        <p>Time</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -504,7 +494,7 @@
                 </div>
             </div>
 
-            <aside class="lg:col-span-1 lg:sticky lg:top-24 flex flex-col gap-6">
+            <aside class="md:col-span-2 lg:col-span-1 lg:sticky lg:top-24 flex flex-col gap-6 w-full">
                 <!-- trending -->
                 <div class="card p-4 shadow rounded-xl">
                     <h2 class="text-2xl font-semibold mb-4">Trending News</h2>
@@ -564,31 +554,30 @@
 
 
                 <!-- Follow us -->
-                
-                <div
-                        class="card p-4 shadow rounded-xl text-center">
-                        <h2 class="text-2xl font-semibold mb-4">Follow us</h2>
-                        <div class="flex flex-wrap justify-center gap-2 text-sm">
-                            <a class="border px-3 py-1 rounded" href="#">Facebook</a>
-                            <a class="border px-3 py-1 rounded" href="#">X</a>
-                            <a class="border px-3 py-1 rounded" href="#">Instagram</a>
-                            <a class="border px-3 py-1 rounded" href="#">Youtube</a>
-                        </div>
+
+                <div class="card p-4 shadow rounded-xl text-center">
+                    <h2 class="text-2xl font-semibold mb-4">Follow us</h2>
+                    <div class="flex flex-wrap justify-center gap-2 text-sm">
+                        <a class="border px-3 py-1 rounded" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="border px-3 py-1 rounded" href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a class="border px-3 py-1 rounded" href="#"><i class="bi bi-instagram"></i></a>
+                        <a class="border px-3 py-1 rounded" href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
                 </div>
-                
-                    <!-- News Letter -->
-                
+
+                <!-- News Letter -->
+
                 <div class="card p-4 shadow rounded-xl bg-[var(--primary)] text-white">
-                        <h2 class="text-xl mb-2 font-semibold">Subscribe to Newsletter</h2>
-                        <p class="text-sm sm:text-base mb-3">Get the latest news delivered to your inbox daily.</p>
-                        <input class="w-full mb-2 px-3 py-2 text-gray-500 rounded border border-gray-700" type="email" name="" id=""
-                            placeholder="Enter your email">
-                        <button class="rounded font-semibold py-2 w-full bg-[var(--accent)]">Subscribe</button>
+                    <h2 class="text-xl mb-2 font-semibold">Subscribe to Newsletter</h2>
+                    <p class="text-sm sm:text-base mb-3">Get the latest news delivered to your inbox daily.</p>
+                    <input class="w-full mb-2 px-3 py-2 text-gray-500 rounded border border-gray-700" type="email"
+                        name="" id="" placeholder="Enter your email">
+                    <button class="rounded font-semibold py-2 w-full bg-[var(--accent)]">Subscribe</button>
                 </div>
-                
+
 
             </aside>
-            
+
         </div>
 
     </section>
