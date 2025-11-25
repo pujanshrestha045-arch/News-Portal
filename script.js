@@ -24,3 +24,26 @@ menuToggle.addEventListener('click', function(event){
 })
 
 document.addEventListener('click', closeMenu)
+
+//Carousel Navigators
+document.addEventListener("DOMContentLoaded" , () => {
+const slideLeft = document.getElementById("slideLeft");
+const slideRight = document.getElementById("slideRight")
+const newsContainer = document.getElementById("newsContainer")
+
+const slideWidth = () => newsContainer.querySelector(".carousel-slide").offsetWidth;
+
+slideLeft.addEventListener ("click", () => {
+    newsContainer.scrollBy({
+        left: -slideWidth(),
+        behavior: "smooth"
+    })
+})
+
+slideRight.addEventListener ("click", () => {
+    newsContainer.scrollBy({
+        left: slideWidth(),
+        behavior: "smooth"
+    })
+})
+})
