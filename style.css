@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 :root{
     --background: #FFF;
     --primary: #002a4e;
@@ -10,6 +12,16 @@
 
 body{
     scroll-behavior: smooth;
+}
+
+body h2,h3,h4,h5,h6{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body p{
+    font-family: "Merriweather Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .card img, .carousel-slide img{
