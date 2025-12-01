@@ -46,4 +46,24 @@ slideRight.addEventListener ("click", () => {
         behavior: "smooth"
     })
 })
+
+
+const autoScrollSpeed = 3000
+
+setInterval(() => {
+    const maxScroll = newsContainer.scrollWidth - newsContainer.clientWidth
+
+    if (newsContainer.scrollLeft >= maxScroll) {
+        newsContainer.scrollTo({
+            left: 0, 
+            behavior: "smooth"
+        })
+    }
+    else{
+        newsContainer.scrollBy({
+            left: slideWidth(),
+            behavior: "smooth"
+        })
+    }
+}, autoScrollSpeed)
 })
