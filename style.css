@@ -25,7 +25,11 @@ body p{
 }
 
 .card img, .carousel-slide img{
-    width: 100%; aspect-ratio: 16/9; object-fit: cover; resize: both;
+    width: 100%; aspect-ratio: 16/9; object-fit: cover; resize: both; cursor: pointer;
+}
+
+.details h2, .details p{
+    cursor: pointer;
 }
 
 @media (min-width: 1024px) {
